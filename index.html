@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GharKiraya – Rent furniture & appliances</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top">GharKiraya</a>
+      <nav><a href="#products">Products</a><a href="#how">How it works</a><a href="#why">Why us</a><a
+          href="#faq">FAQ</a></nav>
+      <button class="btn alt" id="cartBtn" type="button">Cart (<span id="cnt">0</span>)</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <h1>Furnish your home without buying a thing.</h1>
+        <p>Rent beds, sofas, fridges and washing machines by the month. Free delivery, free repairs, and you can return
+          anything when you move.</p>
+        <div class="search">
+          <select id="city" aria-label="City">
+            <option>Delhi NCR</option>
+            <option>Bengaluru</option>
+            <option>Mumbai</option>
+            <option>Pune</option>
+            <option>Hyderabad</option>
+            <option>Chandigarh</option>
+          </select>
+          <a class="btn" href="#products">Browse products</a>
+        </div>
+        <div class="trust"><span>Free delivery &amp; installation</span><span>Free maintenance</span><span>Zero-cost
+            relocation</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div>🛏️<small>Bed</small></div>
+        <div>🛋️<small>Sofa</small></div>
+        <div>🧊<small>Fridge</small></div>
+        <div>🧺<small>Washer</small></div>
+        <div>💻<small>Desk</small></div>
+        <div>❄️<small>AC</small></div>
+        <div class="price">Fully furnished from ₹1,499/mo</div>
+      </div>
+    </div>
+
+    <section id="products">
+      <div class="wrap">
+        <div class="sec-h">
+          <div>
+            <h2>Pick what you need</h2>
+            <p id="showing">Showing all products in Delhi NCR</p>
+          </div>
+          <div class="tenure" role="group" aria-label="Rental duration" id="tenure"></div>
+        </div>
+        <div class="cats" id="cats" style="margin-bottom:26px"></div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="sec-h">
+          <h2>Rent in three steps</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>Choose items</h3>
+            <p>Add products to your cart and pick a duration from 3 to 12 months. Longer plans cost less per month.</p>
+          </div>
+          <div class="step">
+            <h3>Verify with KYC</h3>
+            <p>Upload your ID online. Most approvals take under an hour.</p>
+          </div>
+          <div class="step">
+            <h3>Get it delivered</h3>
+            <p>We deliver and set everything up within 72 hours. Pay monthly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="wrap">
+        <div class="perks">
+          <div>
+            <h3>Free repairs</h3>
+            <p>Something breaks? We fix or replace it at no cost.</p>
+          </div>
+          <div>
+            <h3>Move anywhere</h3>
+            <p>Shifting cities? We relocate your rentals for free.</p>
+          </div>
+          <div>
+            <h3>Refundable deposit</h3>
+            <p>Your deposit comes back within 7 days of pickup.</p>
+          </div>
+          <div>
+            <h3>Upgrade or return</h3>
+            <p>Swap items or end your plan with 30 days' notice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap" style="max-width:760px">
+        <div class="sec-h">
+          <h2>Questions</h2>
+        </div>
+        <details>
+          <summary>Do I pay a security deposit?</summary>
+          <p>Yes, a refundable deposit equal to about one month's rent per item. It is returned after pickup.</p>
+        </details>
+        <details>
+          <summary>What if I want to return early?</summary>
+          <p>You can close your plan anytime with 30 days' notice. Early closure may carry a small fee.</p>
+        </details>
+        <details>
+          <summary>Who pays for repairs?</summary>
+          <p>We do. Normal wear and tear is covered. Damage beyond normal use may be charged.</p>
+        </details>
+        <details>
+          <summary>Which cities do you serve?</summary>
+          <p>Use the city selector at the top. We are adding more cities each quarter.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap" style="max-width:900px">
+        <div class="sec-h">
+          <h2>Get in touch</h2>
+          <p>Questions about a product or your order? Send us a message.</p>
+        </div>
+        <div class="contact-wrap">
+          <form id="contactForm" novalidate>
+            <div class="field"><label for="cName">Name</label><input id="cName" name="name" autocomplete="name"><span
+                class="err" id="cName-e"></span></div>
+            <div class="field"><label for="cEmail">Email</label><input id="cEmail" name="email" type="email"
+                autocomplete="email"><span class="err" id="cEmail-e"></span></div>
+            <div class="field"><label for="cPhone">Phone (optional)</label><input id="cPhone" name="phone" type="tel"
+                autocomplete="tel"><span class="err" id="cPhone-e"></span></div>
+            <div class="field"><label for="cMsg">Message</label><textarea id="cMsg" name="message"></textarea><span
+                class="err" id="cMsg-e"></span></div>
+            <button class="btn alt" type="submit">Send message</button>
+          </form>
+          <div class="contact-info">
+            <h3>Reach us directly</h3>
+            <p>support@gharkiraya.com</p>
+            <p>+91 9988765900</p>
+            <p>Mon–Sat, 9am–7pm</p>
+            <h3 style="margin-top:18px">Head office</h3>
+            <p>GharKiraya Pvt Ltd, Gurugram, Haryana</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="checkout">
+    <div class="co-head">
+      <h2>Checkout</h2><button class="co-close" id="coClose" aria-label="Close checkout" type="button">&times;</button>
+    </div>
+    <div class="co-body">
+      <div id="coItems"></div>
+      <div class="co-tot"><span>Monthly rent total<small id="coTenNote"></small></span><span id="coTotal">₹0</span>
+      </div>
+      <div class="co-tot" style="border-top:0;padding-top:0"><span>Refundable deposit<small>~1 month's rent per
+            item</small></span><span id="coDep">₹0</span></div>
+      <form id="checkoutForm" novalidate style="margin-top:18px">
+        <div class="field"><label for="oName">Full name</label><input id="oName" name="name"><span class="err"
+            id="oName-e"></span></div>
+        <div class="frow">
+          <div class="field"><label for="oPhone">Phone</label><input id="oPhone" name="phone" type="tel"><span
+              class="err" id="oPhone-e"></span></div>
+          <div class="field"><label for="oPin">Pincode</label><input id="oPin" name="pincode" inputmode="numeric"><span
+              class="err" id="oPin-e"></span></div>
+        </div>
+        <div class="field"><label for="oAddr">Delivery address</label><textarea id="oAddr"
+            name="address"></textarea><span class="err" id="oAddr-e"></span></div>
+        <button class="btn" type="submit" id="placeOrder">Place order</button>
+      </form>
+    </div>
+  </dialog>
+
+  <footer>
+    <div class="wrap foot"><span>© 2026 GharKiraya.</span><span>About · Careers · Contact · Terms</span></div>
+  </footer>
+  <div id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
